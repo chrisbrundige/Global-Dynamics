@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="312.0" style="-fx-background-color: rgb(40,40,40);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.addAppointmentController">
+   <children>
+      <GridPane layoutX="40.0" layoutY="38.0" prefHeight="310.0" prefWidth="230.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="78.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="124.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="69.0" minHeight="3.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="69.0" minHeight="3.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="143.0" minHeight="8.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="192.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="192.0" minHeight="9.0" prefHeight="31.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="192.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="192.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField fx:id="ID_col" disable="true" promptText="Auto gen" GridPane.columnIndex="1" />
+            <DatePicker fx:id="date_col" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="name" GridPane.rowIndex="1" />
+            <Label text="contact" textFill="#00aaef" GridPane.rowIndex="4" />
+            <Label text="title" textFill="#00aaef" GridPane.rowIndex="1" />
+            <Label text="location" textFill="#00aaef" GridPane.rowIndex="3" />
+            <Label disable="true" text="ID" textFill="#00aaef" />
+            <TextField fx:id="type_col" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="type" textFill="#00aaef" GridPane.rowIndex="5" />
+            <Label text=" Date" textFill="#00aaef" GridPane.rowIndex="6" />
+            <TextField fx:id="title_col" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="contact_combo" prefWidth="150.0" promptText="contact" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="start time" textFill="#00aaef" GridPane.rowIndex="7" />
+            <Label text="customer ID" textFill="#00aaef" GridPane.rowIndex="9" />
+            <TextField fx:id="start_col" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="end_col" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <ComboBox fx:id="customerId_combo" prefHeight="30.0" prefWidth="132.0" promptText="customer ID" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label text="description" textFill="#00aaef" GridPane.rowIndex="2" />
+            <TextField fx:id="desc_col" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="location_combo" prefWidth="150.0" promptText="location" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="end time" textFill="#00aaef" GridPane.rowIndex="8" />
+            <Label fx:id="user_box" text="USER" textFill="#00aaef" GridPane.rowIndex="10" />
+            <ComboBox fx:id="user_combo" prefHeight="30.0" prefWidth="132.0" promptText="User" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+         </children>
+      </GridPane>
+      <Button fx:id="add_appt_button" alignment="TOP_CENTER" layoutX="107.0" layoutY="405.0" mnemonicParsing="false" onAction="#add_appt" prefHeight="27.0" prefWidth="98.0" style="-fx-background-color: none; -fx-border-radius: 50%; -fx-border-color: #00aeff#00aeff;" styleClass="menu_button" text="Add meeting" textAlignment="CENTER" textFill="#00aeff">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

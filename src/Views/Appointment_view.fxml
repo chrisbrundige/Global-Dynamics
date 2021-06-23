@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.24749163879598662" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ApptViewController">
+   <items>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="6.0" style="-fx-background-color: rgb(40,40,40);">
+         <children>
+            <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="208.0" prefHeight="181.0" prefWidth="167.0">
+               <children>
+                  <Button fx:id="cust_records_hyperlink" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#goto_customer_records" style="-fx-background-color: none;" styleClass="menu_button" text="Customer Records" textAlignment="CENTER" textFill="#00aeff">
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Appt_hyperlink" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#goto_appt_scene" style="-fx-background-color: none;" styleClass="menu_button" text="Appointments" textAlignment="CENTER" textFill="#f7f2f2">
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="reports_hyperlink" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#goto_reports" style="-fx-background-color: none;" styleClass="menu_button" text="Reports" textAlignment="CENTER" textFill="#f7f2f2">
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Text fill="#00aeff" layoutX="12.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GLOBAL DYNAMICS CONSULTING " wrappingWidth="127.33332824707031" />
+         </children>
+      </AnchorPane>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="menu_item">
+         <children>
+            <TableView id="appointment_table" fx:id="appointment_table" layoutX="14.0" layoutY="88.0" prefHeight="200.0" prefWidth="710.0">
+               <columns>
+                  <TableColumn id="id_col" fx:id="id_col" prefWidth="29.333343505859375" text="ID" />
+                  <TableColumn id="title_col" fx:id="title_col" prefWidth="47.666656494140625" text="Title" />
+                  <TableColumn id="desc_col" fx:id="desc_col" prefWidth="63.0" text="desc" />
+                  <TableColumn id="location_col" fx:id="location_col" prefWidth="82.66668701171875" text="Location" />
+                  <TableColumn id="contact_col" fx:id="contact_col" prefWidth="118.5" text="contact" />
+                  <TableColumn id="contact_col" fx:id="email_col" prefWidth="118.5" text="email" />
+                  <TableColumn id="type_col" fx:id="type_col" prefWidth="77.0" text="type" />
+                  <TableColumn id="start_col" fx:id="start_col" prefWidth="109.0" text="Start" />
+                  <TableColumn id="end_col" fx:id="end_col" prefWidth="51.5" text="END" />
+                  <TableColumn id="customerID_col" fx:id="customerID_col" prefWidth="129.5" text="Customer ID" />
+               </columns>
+            </TableView>
+            <Label layoutX="18.0" layoutY="59.0" text="Appointments " />
+            <Button fx:id="Add_appt_button" alignment="TOP_CENTER" layoutX="118.0" layoutY="58.0" mnemonicParsing="false" onAction="#goto_add_appt" style="-fx-background-color: none; -fx-border-radius: 50%; -fx-border-color: #00aeff#00aeff;" styleClass="menu_button" text="ADD" textAlignment="CENTER" textFill="#00aeff">
+               <font>
+                  <Font name="Arial" size="9.0" />
+               </font>
+            </Button>
+            <Label layoutX="414.0" layoutY="60.0" text="view by | ">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="week_view_radio" layoutX="548.0" layoutY="59.0" mnemonicParsing="false" onAction="#checkSelection" text="week" />
+            <RadioButton fx:id="month_view_radio" layoutX="626.0" layoutY="59.0" mnemonicParsing="false" onAction="#checkSelection" text="month" />
+            <Button fx:id="update_appt" alignment="TOP_CENTER" layoutX="352.0" layoutY="295.0" mnemonicParsing="false" onAction="#updateAppt" style="-fx-background-color: none; -fx-border-radius: 50%; -fx-border-color: #00aeff#00aeff;" styleClass="menu_button" text="Update" textAlignment="CENTER" textFill="#00aeff">
+               <font>
+                  <Font name="Arial" size="9.0" />
+               </font>
+            </Button>
+            <Button fx:id="del_appt" alignment="TOP_CENTER" layoutX="427.0" layoutY="295.0" mnemonicParsing="false" onAction="#deleteAppt" style="-fx-background-color: none; -fx-border-radius: 50%; -fx-border-color: #00aeff#00aeff;" styleClass="menu_button" text="Delete" textAlignment="CENTER" textFill="#00aeff">
+               <font>
+                  <Font name="Arial" size="9.0" />
+               </font>
+            </Button>
+            <RadioButton fx:id="all_view_radio" layoutX="485.0" layoutY="59.0" mnemonicParsing="false" onAction="#checkSelection" text="all" />
+            <Label fx:id="appt_reminder" layoutX="137.0" layoutY="347.0" prefHeight="49.0" prefWidth="576.0" text="Label" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </AnchorPane>
+   </items>
+</SplitPane>

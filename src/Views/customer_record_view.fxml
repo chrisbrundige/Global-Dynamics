@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.24749163879598662" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1162.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.customer_record_controller">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: rgb(40,40,40);">
+         <children>
+            <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="208.0" prefHeight="181.0" prefWidth="167.0">
+               <children>
+                  <Button fx:id="cust_records_hyperlink" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#goto_customer_records" style="-fx-background-color: none;" styleClass="menu_button" text="Customer Records" textAlignment="CENTER" textFill="#00aeff">
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Appt_hyperlink" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#goto_appt_scene" style="-fx-background-color: none;" styleClass="menu_button" text="Appointments" textAlignment="CENTER" textFill="#f7f2f2">
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="reports_hyperlink" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#goto_reports" style="-fx-background-color: none;" styleClass="menu_button" text="Reports" textAlignment="CENTER" textFill="#f7f2f2">
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Text fill="#00aeff" layoutX="12.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GLOBAL DYNAMICS CONSULTING " wrappingWidth="127.33332824707031" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="451.0" prefWidth="589.0" styleClass="menu_item">
+         <children>
+            <TableView fx:id="customer_table_view" layoutX="10.0" layoutY="86.0" prefHeight="200.0" prefWidth="856.0">
+              <columns>
+                <TableColumn fx:id="id_column" prefWidth="29.333343505859375" text="ID" />
+                <TableColumn fx:id="name_column" minWidth="0.0" prefWidth="74.0" text="Name" />
+                  <TableColumn fx:id="address_column" prefWidth="69.0" text="Address" />
+                  <TableColumn fx:id="postal_code_column" prefWidth="125.0" text="Postal code" />
+
+                  <TableColumn fx:id="phone_column" prefWidth="59.5" text="Phone" />
+                  <TableColumn fx:id="create_column" prefWidth="81.5" text="Create Date" />
+                  <TableColumn fx:id="createBy_col" prefWidth="100.5" text="created by" />
+                  <TableColumn fx:id="update_col" minWidth="0.0" prefWidth="76.0" text="last update" />
+                  <TableColumn fx:id="div_col" prefWidth="49.0" text="division" />
+                  <TableColumn fx:id="updateBy_col" minWidth="0.0" prefWidth="298.0" text="last update by" />
+              </columns>
+            </TableView>
+            <Label layoutX="10.0" layoutY="50.0" text="Customer Records" />
+            <Button fx:id="Add_customer_button" alignment="TOP_CENTER" layoutX="574.0" layoutY="49.0" mnemonicParsing="false" onAction="#goto_add_customer" style="-fx-background-color: none; -fx-border-radius: 50%; -fx-border-color: #00aeff#00aeff;" styleClass="menu_button" text="Add Customer" textAlignment="CENTER" textFill="#00aeff">
+               <font>
+                  <Font name="Arial" size="9.0" />
+               </font>
+            </Button>
+
+            <Button fx:id="modify_customer" alignment="TOP_CENTER" layoutX="590.0" layoutY="295.0" mnemonicParsing="false" onAction="#modifyCustomer" style="-fx-background-color: none; -fx-border-radius: 50%; -fx-border-color: #00aeff#00aeff;" styleClass="menu_button" text="modify" textAlignment="CENTER" textFill="#00aeff">
+               <font>
+                  <Font name="Arial" size="9.0" />
+               </font>
+            </Button>
+            <Button fx:id="delete_customer" alignment="TOP_CENTER" layoutX="672.0" layoutY="295.0" mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="0.0" prefWidth="72.0" style="-fx-background-color: none; -fx-border-radius: 50%; -fx-border-color: #00aeff#00aeff;" styleClass="menu_button" text="Delete" textAlignment="CENTER" textFill="#00aeff">
+               <font>
+                  <Font name="Arial" size="9.0" />
+               </font>
+            </Button>
+            <Label fx:id="appt_reminder" layoutX="41.0" layoutY="305.0" prefHeight="63.0" prefWidth="530.0" text="you have no appotinments scheduled" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></AnchorPane>
+  </items>
+</SplitPane>
